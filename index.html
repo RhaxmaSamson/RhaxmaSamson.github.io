@@ -4,220 +4,353 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rhaxma S - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; /* Light gray background */
+            background-image: url('port.png'); /* Corrected background image syntax */
+            background-size: cover; /* Ensure the background image covers the whole body */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            background-position: center; /* Center the background image */
+            display: flex; /* Use flexbox for layout */
+            min-height: 100vh; /* Ensure minimum viewport height */
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #96abed; /* Facebook blue */
+            font-size: 20px;
+            color: #fff; /* White text */
+            padding: 20px;
+            width: 240px; /* Fixed width for the left panel */
+            overflow-y: auto; /* Enable scrolling if needed */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            z-index: 1000; /* Ensure header stays above other content */
+            height: 100%; /* Full height of the viewport */
+            position: fixed; /* Fixed position */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px; /* Larger font size */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left; /* Align nav links to the left */
+            margin-top: 20px; /* Space from top */
+        }
+
+        nav ul li {
+            margin-bottom: 10px; /* Increased margin between items */
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease; /* Smooth transition for hover effects */
+            padding: 10px; /* Increase padding for easier click */
+            border-radius: 4px; /* Rounded corners */
+            display: block; /* Make link full width */
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(244, 225, 79, 0.834); /* Lighten background on hover */
+        }
+
+        /* Content Container */
+        .content-container {
+            flex: 1; /* Take remaining width */
+            padding: 40px; /* Padding for content */
+            overflow-y: auto; /* Enable scrolling for content */
+            margin-left: 240px; /* Adjust for the fixed header width */
+            margin-top: 80px; /* Ensure content starts below the fixed header */
+        }
+
+        /* Tab Content Styles */
+        .tab-content {
+            background-color: #d5cbe4; /* White background */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            border-radius: 4px; /* Rounded corners */
+            padding: 20px; /* Padding for content */
+        }
+
+        section {
+            display: none; /* Initially hide all sections */
+            padding: 20px 0; /* Padding top and bottom */
+        }
+
+        section.active {
+            display: block; /* Show active section */
+            animation: slideIn 0.5s ease; /* Slide-in animation */
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px); /* Start slightly below */
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0); /* Slide up to normal position */
+                opacity: 1;
+            }
+        }
+
+        /* Adjustments for small screens */
+        @media (max-width: 768px) {
+            .content-container {
+                margin-left: 0; /* Reset left margin for smaller screens */
+            }
+            header {
+                width: 100%; /* Full width for header on smaller screens */
+                position: static; /* Static position for header on smaller screens */
+                height: auto; /* Auto height for header on smaller screens */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <img src="profile_photo.png" alt="Rhaxma S" class="profile-photo">
+        <img src="img.png" alt="Rhaxma S" class="profile-photo">
         <h1>Rhaxma S</h1>
         <nav>
             <ul>
-                <li><a href="#About">About Me</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Education">Education</a></li>
-                <li><a href="#Contact">Contact</a></li>
-                <li><a href="#Internships">Internships</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#languages">Languages Known</a></li>
+                <li><a href="#internships">Internship Experience</a></li>
+                <li><a href="#work">Work Experience</a></li>
+                <li><a href="#career">Career Objective</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#interests">Area of Interest</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#declaration">Declaration</a></li>
             </ul>
         </nav>
     </header>
-    
-    
-    <section id="About">
-        <h2>About Me</h2>
-        <p>
-            I am a highly passionate individual who thrives upon
-            seeking new challenges to contribute my knowledge in
-            establishing a good career. I'm a highly skilled,
-            competent, and diligent individual who can work
-            together as a team and continuously improvise myself
-            for the benefit of the organization.
-        </p>
 
-    </section>
-    <section id="Contact">
-        <h2>Contact</h2>
-        <p>Email: rhaxma04@gmail.com</p>
-        <p>Phone: 9363344247</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/rhaxma-samson-15576a25b">Rhaxma Samson</a></p>
-    </section>
-    <section>
-        <h3>Technical Skills</h3>
-        <ul>
-            <li>Python</li>
-            <li>Java - Intermediate</li>
-            <li>Data Science and Data Analytics</li>
-            <li>Data mining</li>
-            <li>R - Beginner</li>
-            <li>PHP - Beginner</li>
-            <li>Tableau</li>
-            <li>HTML, CSS</li>
-            <li>MySQL</li>
-        </ul>
-        <h3>Soft Skills</h3>
-        <ul>
-            <li>Leadership</li>
-            <li>Decision making</li>
-            <li>Communication</li>
-            <li>Multi-tasking</li>
-            <li>Time management</li>
-            <li>Team working</li>
-        </ul>
+    <div class="content-container">
+        <div class="tab-content">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    I am a highly passionate individual who thrives upon
+                    seeking new challenges to contribute my knowledge in
+                    establishing a good career. I'm a highly skilled,
+                    competent, and diligent individual who can work
+                    together as a team and continuously improvise myself
+                    for the benefit of the organization.
+                </p>
+            </section>
+            
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Email: rhaxma04@gmail.com</p>
+                <p>Phone: 9363344247</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/rhaxma-samson-15576a25b">Rhaxma Samson</a></p>
+                <p>Github: <a href="https://github.com/RhaxmaSamson"> RhaxmaSamson</a></p>
+            </section>
 
-        <h3> Languages Known</h3>
-        <ul>
-            <li>Tamil   - Proficient</li>
-            <li>English - Proficient</li>
-            <li>Hindi   - Intermediate</li>
-            <li>German  - Beginner</li>
-        </ul>
+            <section id="skills">
+               <h2>Technical Skills</h2>
+               <ul>
+                   <li>Python</li>
+                   <li>Java - Intermediate</li>
+                   <li>Machine learning and Deep learning algorithms</li>
+                   <li>AI tools and frameworks</li>
+                   <li>Data Science and Data Analytics</li>
+                   <li>Data mining</li>
+                   <li>R - Beginner</li>
+                   <li>PHP - Beginner</li>
+                   <li> Django, Flask</li>
+                   <li>Tableau</li>
+                   <li>HTML, CSS, Js</li>
+                   <li>MySQL</li>
+               </ul>
+               <h2>Soft Skills</h2>
+               <ul>
+                   <li>Leadership</li>
+                   <li>Communication</li>
+                   <li>Multi-tasking</li>
+                   <li>Time management</li>
+                   <li>Team working</li>
+               </ul>
+            </section>
 
-
-
-        <!-- <h3>Education Background</h3>
-        <p>
-            B.Tech Artificial Intelligence and Data Science (2020-2024)<br>
-            CARE College of Engineering, Trichy<br>
-            CGPA: 8.7
-        </p>
-        <p>
-            HSC (2019-2020)<br>
-            Mary Matha Matriculation Hr.Sec.School, Theni<br>
-            Secured: 72%
-        </p>
-        <p>
-            SSLC (2017-2018)<br>
-            Mary Matha Matriculation Hr.Sec.School, Theni<br>
-            Secured: 94%
-        </p> -->
-    </section>
-    
-    <section id="Projects">
-        <h2>Projects</h2>
-        <h3>Sentimental Analysis of Twitter Data</h3>
-        <p>Data Science, Machine Learning, Data Analytics, Artificial Intelligence</p>
-        <p>
-            I led a team of 4 members to develop a mini project on the
-            topic - sentimental analysis of Twitter data. We used Machine
-            Learning algorithms, precisely Naive Bayes and XG Booster
-            algorithms. The implementation was done on Google Colab.
-        </p>
-        <!-- Add more project details here -->
-        <h3>Pneumonia Detection of Chest X-rays using CNN algorithm</h3>
-        <p>
-            I led a team of 4 members in the socially relevant project to
-            detect Pneumonia in persons using Chest X-rays and also
-            developed a website for the detection of this disease.
-        </p>
-        <!-- Add more project details here -->
-        <h3>Restaurant Review Analysis using PHP</h3>
-        <p>
-            I worked in a team of 4 members in the internship project to develop
-            a website to analyze the reviews of the restaurant and to generate
-            the feedback.
-        </p>
-        <!-- Add more project details here -->
-        <h3>Comprehensive Product Analysis</h3>
-        <p>
-            I worked in a team of 4 members in the mini project on analytics to
-            analyze the products based on the sales forecast to predict highest sales.
-        </p>
-        <!-- Add more project details here -->
-    </section>
-    
-    <section id="Education">
-        <h2>Education</h2>
-        <p>
-            B.Tech Artificial Intelligence and Data Science (2020-2024)<br>
-            CARE College of Engineering, Trichy<br>
-            CGPA: 8.7
-        </p>
-        <p>
-            HSC (2019-2020)<br>
-            Mary Matha Matriculation Hr.Sec.School, Theni<br>
-            Secured: 72%
-        </p>
-        <p>
-            SSLC (2017-2018)<br>
-            Mary Matha Matriculation Hr.Sec.School, Theni<br>
-            Secured: 94%
-        </p>
-    </section>
-
-    <section>
-        <h3> Career Objective</h3>
-        <p>To secure a good position in a company where I can showup my skillls and abilities and work together as a team to make contribution to the organization. </p>
-    </section>
-
-    <section id="Internships">
-        <h2>Internships</h2>
-        <ul>
-            <li>NSIC chennai - Industrial Embedded with AI and IoT-</li>
-            <li>VEI Technologies - Deep Learning using AI</li>
-            <li>Pantech Solutions - Artificial Intelligence</li>
-            <li>Shalom Infotech Trichy - Web development using PHP and MySQL</li>
-            <li>Shiash Infosolutions Chennai - Data Science</li>
-           
-        </ul>
+            <section id="languages">
+                <h2>Languages Known</h2>
         
-    </section>
+                <ul>
+                    <li>Tamil   - Proficient</li>
+                    <li>English - Proficient</li>
+                    <li>Hindi   - Intermediate</li>
+                    <li>German  - Beginner</li>
+                </ul>
+            </section>
 
+            <section id="internships">
+                <h2>Internship Experience</h2>
+        
+                <ul>
+                    <li>NSIC Chennai - Industrial Embedded with AI and IoT</li>
+                    <li>VEI Technologies - Deep Learning using AI</li>
+                    <li>Pantech Solutions - Artificial Intelligence</li>
+                    <li>Shalom Infotech Trichy - Web Development using PHP and MySQL</li>
+                    <li>Shiash Infosolutions Chennai - Data Science</li>
+                </ul>
+            </section>
 
-    <section id="Courses">
-        <h2>Courses</h2>
-        <ul>
-            <li>Courseera - AI for Everyone</li>
-            <li>Nan Mudhalvan - Data Analytics, AI and its applications</li>
-            <li>IBM - Introduction to cloud computing </li>
-            <li>Workshop on Artificial Intelligence - VEI technologies </li>
-            <li>Great Learning - Data Visualization using Tableau</li>
-            <li>Linkedin Learning - Getting Started with Power BI</li>
-           
-        </ul>
+            <section id="work">
+                <h2>Work Experience</h2>
         
-    </section>
-    
-    <section id="Area Of Interest">
-        <h2>Area Of Interest</h2>
-        <ul>
-            <li>Data Science</li>
-            <li>Machine Learning</li>
-            <li>Data Analytics</li>
-            <li>Artificial Intelligence</li>
-            <li>Web Designing</li>
-            <li>Business Development</li>
-           
-        </ul>
-        
-    </section>
+                <ul>
+                    <li>AI Developer Trainee @ NRG Phoenix Technology, Chennai (Present)</li>
+                </ul>
+            </section>
 
-    <section id="Hobbies">
-        <h2>Hobbies</h2>
-        <ul>
-            <li>Travelling</li>
-            <li>Listening and singing songs</li>
-            <li>Dancing</li>
-            <li>Cooking</li>
-            <li>Reading story books</li>
-           
-           
-        </ul>
+            <section id="career">
+                <h2>Career Objective</h2>
         
-    </section>
+                <ul>
+                    <li>To leverage my technical skills by contributing to innovative projects and further developing my expertise.</li>
+                </ul>
+            </section>
 
-    <section id="Declaration">
-       <h3> Declaration </h3>
-       <p>I RHAXMA S hereby declare that the information contained here is true and correct to the best of my knowledge and belief. </p>
+            <section id="education">
+                <h2>Education</h2>
         
-    </section>
-   
+                <p>
+                    B.Tech Artificial Intelligence and Data Science (2020-2024)<br>
+                    CARE College of Engineering, Trichy<br>
+                    CGPA: 8.7
+                </p>
+                <p>
+                    HSC (2019-2020)<br>
+                    Mary Matha Matriculation Hr.Sec.School, Theni<br>
+                    Secured: 72%
+                </p>
+                <p>
+                    SSLC (2017-2018)<br>
+                    Mary Matha Matriculation Hr.Sec.School, Theni<br>
+                    Secured: 94%
+                </p>
+            </section>
+
+            <section id="courses">
+                <h2>Courses</h2>
+        
+                <ul>
+                    <li>Courseera - AI for Everyone</li>
+                    <li>Nan Mudhalvan - Data Analytics, AI and its Applications</li>
+                    <li>IBM - Introduction to Cloud Computing</li>
+                    <li>Workshop on Artificial Intelligence - VEI Technologies</li>
+                    <li>Great Learning - Data Visualization using Tableau</li>
+                    <li>LinkedIn Learning - Getting Started with Power BI</li>
+                </ul>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <div>
+                    <h3>Sentiment Analysis of Twitter Data</h3>
+                    <p>Data Science, Machine Learning, Data Analytics, Artificial Intelligence</p>
+                    <p>
+                        I led a team of 4 members to develop a mini project on the
+                        topic - sentimental analysis of Twitter data. We used Machine
+                        Learning algorithms, precisely Naive Bayes and XG Booster
+                        algorithms. The implementation was done on Google Colab.
+                        <a href="https://github.com/RhaxmaSamson/Sentimental-Analysis-source-code-data">Link</a>
+                    </p>
+                </div>
+                <div>
+                    <h3>Pneumonia Detection of Chest X-rays using CNN algorithm</h3>
+                    <p>
+                        I led a team of 4 members in the socially relevant project to
+                        detect Pneumonia in persons using Chest X-rays and also
+                        developed a website for the detection of this disease.
+                    </p>
+                </div>
+                <div>
+                    <h3>Restaurant Review Analysis using PHP</h3>
+                    <p>
+                        I worked in a team of 4 members in the internship project to develop
+                        a website to analyze the reviews of the restaurant and to generate
+                        the feedback.
+                        <a href="https://github.com/RhaxmaSamson/FEEDBACK-ANALYSIS-SOURCE">Link</a>
+                    </p>
+                </div>
+                <div>
+                    <h3>Comprehensive Product Analysis</h3>
+                    <p>
+                        I worked in a team of 4 members in the mini project on analytics to
+                        analyze the products based on the sales forecast to predict highest sales.
+                        <a href="https://github.com/RhaxmaSamson/Comprehensive-Product-Analysis">Link</a>
+                    </p>
+                </div>
+                <div>
+                    <h3>Chronic Kidney Disease Stage prediction using Random Forest Algorithm</h3>
+                    <p>
+                        I lead a team of 4 in the project to develop a web application in predicting
+                        the stage of the disease to prevent from kidney tumour
+                        <a href="https://github.com/RhaxmaSamson/Kidney-Disease-Stage-Prediction">Link</a>
+                    </p>
+                </div>
+            </section>
+
+            <section id="interests">
+                <h2>Area of Interest</h2>
+                
+                <ul>
+                    <li>Data Science</li>
+                    <li>Machine Learning</li>
+                    <li>Data Analytics</li>
+                    <li>Artificial Intelligence Development</li>
+                    <li>Web Designing</li>
+                    <li>Business Development</li>    
+                </ul>
+            </section>
+
+            <section id="hobbies">
+                <h2>Hobbies</h2>
+                
+                <ul>
+                    <li>Travelling</li>
+                    <li>Listening and singing songs</li>
+                    <li>Dancing</li>
+                    <li>Cooking</li>
+                    <li>Reading story books</li>
+                </ul>
+            </section>
+
+            <section id="declaration">
+                <h2>Declaration</h2>
+                <p>I RHAXMA S hereby declare that the information contained here is true and correct to the best of my knowledge and belief.</p>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for tab functionality
+        document.addEventListener("DOMContentLoaded", function() {
+            const tabs = document.querySelectorAll('nav ul li a');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const target = this.getAttribute('href').substring(1); // Get target section ID
+                    const sections = document.querySelectorAll('section');
+                    sections.forEach(section => {
+                        section.classList.remove('active'); // Hide all sections
+                    });
+                    document.getElementById(target).classList.add('active'); // Show target section
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
